@@ -44,7 +44,7 @@ class APIManager {
                         observer.onNext(value)
                         observer.onCompleted()
                     case .failure(let error):
-                        observer.onError(APIError.networkError(error))
+                        observer.onError(error)
                     }
                 }
             return Disposables.create {

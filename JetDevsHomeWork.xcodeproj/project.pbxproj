@@ -24,6 +24,7 @@
 		183E22712B4FE5AB0069BEA5 /* UIViewCotroller+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22702B4FE5AB0069BEA5 /* UIViewCotroller+Extentions.swift */; };
 		183E22732B4FE6800069BEA5 /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22722B4FE6800069BEA5 /* APIParameter.swift */; };
 		183E22762B4FEA5E0069BEA5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22752B4FEA5E0069BEA5 /* UserDefaultsManager.swift */; };
+		183E22792B4FF1480069BEA5 /* UIImageView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22782B4FF1480069BEA5 /* UIImageView+Extentions.swift */; };
 		4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BCD272B827F006E325E /* AppDelegate.swift */; };
 		4E677BD2272B827F006E325E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BD1272B827F006E325E /* ViewController.swift */; };
 		4E677BD5272B827F006E325E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E677BD3272B827F006E325E /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		183E22702B4FE5AB0069BEA5 /* UIViewCotroller+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewCotroller+Extentions.swift"; sourceTree = "<group>"; };
 		183E22722B4FE6800069BEA5 /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
 		183E22752B4FEA5E0069BEA5 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		183E22782B4FF1480069BEA5 /* UIImageView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extentions.swift"; sourceTree = "<group>"; };
 		44E25A9D32B01E7986F6EE72 /* Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A78362750DC2D3CF1FB868C /* Pods-JetDevsHomeWorkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWorkTests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWorkTests/Pods-JetDevsHomeWorkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E677BCA272B827F006E325E /* JetDevsHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetDevsHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +310,14 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		183E22772B4FF13A0069BEA5 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				183E22782B4FF1480069BEA5 /* UIImageView+Extentions.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 		4E677BC1272B827F006E325E = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +438,7 @@
 		4E677C12272B860A006E325E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				183E22772B4FF13A0069BEA5 /* UIImageView */,
 				183E225E2B4FDFDD0069BEA5 /* API */,
 				183E22592B4FC4D50069BEA5 /* UIButton */,
 				183E22562B4FC4AC0069BEA5 /* String */,
@@ -810,6 +821,7 @@
 				4E677C15272B8650006E325E /* Constants.swift in Sources */,
 				183E22642B4FE1090069BEA5 /* APIEndpoint.swift in Sources */,
 				4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */,
+				183E22792B4FF1480069BEA5 /* UIImageView+Extentions.swift in Sources */,
 				183E22712B4FE5AB0069BEA5 /* UIViewCotroller+Extentions.swift in Sources */,
 				4E677C18272B88A6006E325E /* HomeViewController.swift in Sources */,
 				183E226C2B4FE2930069BEA5 /* UserModel.swift in Sources */,
