@@ -11,6 +11,10 @@
 		183E22462B4FADFF0069BEA5 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22452B4FADFF0069BEA5 /* AppLabel.swift */; };
 		183E22502B4FBE1B0069BEA5 /* UIImage+ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E224F2B4FBE1B0069BEA5 /* UIImage+ImageName.swift */; };
 		183E22532B4FBEDA0069BEA5 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22522B4FBEDA0069BEA5 /* UIColor+Colors.swift */; };
+		183E22552B4FC47B0069BEA5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22542B4FC47B0069BEA5 /* LoginViewModel.swift */; };
+		183E22582B4FC4B70069BEA5 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22572B4FC4B70069BEA5 /* String+Extentions.swift */; };
+		183E225B2B4FC4E00069BEA5 /* ReactiveButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E225A2B4FC4DF0069BEA5 /* ReactiveButton+Extension.swift */; };
+		183E225D2B4FD61D0069BEA5 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E225C2B4FD61D0069BEA5 /* ErrorMessage.swift */; };
 		4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BCD272B827F006E325E /* AppDelegate.swift */; };
 		4E677BD2272B827F006E325E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BD1272B827F006E325E /* ViewController.swift */; };
 		4E677BD5272B827F006E325E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E677BD3272B827F006E325E /* Main.storyboard */; };
@@ -71,6 +75,10 @@
 		183E22452B4FADFF0069BEA5 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
 		183E224F2B4FBE1B0069BEA5 /* UIImage+ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageName.swift"; sourceTree = "<group>"; };
 		183E22522B4FBEDA0069BEA5 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
+		183E22542B4FC47B0069BEA5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		183E22572B4FC4B70069BEA5 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
+		183E225A2B4FC4DF0069BEA5 /* ReactiveButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReactiveButton+Extension.swift"; sourceTree = "<group>"; };
+		183E225C2B4FD61D0069BEA5 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		44E25A9D32B01E7986F6EE72 /* Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A78362750DC2D3CF1FB868C /* Pods-JetDevsHomeWorkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWorkTests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWorkTests/Pods-JetDevsHomeWorkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E677BCA272B827F006E325E /* JetDevsHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetDevsHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,6 +195,7 @@
 		183E224B2B4FB3B90069BEA5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				183E22542B4FC47B0069BEA5 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -219,6 +228,22 @@
 				183E22522B4FBEDA0069BEA5 /* UIColor+Colors.swift */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		183E22562B4FC4AC0069BEA5 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				183E22572B4FC4B70069BEA5 /* String+Extentions.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		183E22592B4FC4D50069BEA5 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				183E225A2B4FC4DF0069BEA5 /* ReactiveButton+Extension.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		4E677BC1272B827F006E325E = {
@@ -339,6 +364,8 @@
 		4E677C12272B860A006E325E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				183E22592B4FC4D50069BEA5 /* UIButton */,
+				183E22562B4FC4AC0069BEA5 /* String */,
 				4E677C4927323092006E325E /* Extension */,
 				4E677C13272B862C006E325E /* Constants */,
 			);
@@ -349,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				4E677C14272B8650006E325E /* Constants.swift */,
+				183E225C2B4FD61D0069BEA5 /* ErrorMessage.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -696,14 +724,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183E225B2B4FC4E00069BEA5 /* ReactiveButton+Extension.swift in Sources */,
 				4E677BFF272B8319006E325E /* BaseTabBarController.swift in Sources */,
 				183E22462B4FADFF0069BEA5 /* AppLabel.swift in Sources */,
 				183E22502B4FBE1B0069BEA5 /* UIImage+ImageName.swift in Sources */,
 				4E677C10272B8455006E325E /* AccountViewController.swift in Sources */,
+				183E22582B4FC4B70069BEA5 /* String+Extentions.swift in Sources */,
 				183E22532B4FBEDA0069BEA5 /* UIColor+Colors.swift in Sources */,
+				183E225D2B4FD61D0069BEA5 /* ErrorMessage.swift in Sources */,
 				4E677BD2272B827F006E325E /* ViewController.swift in Sources */,
 				4E677C4C273230E5006E325E /* UIFont+JetDevs.swift in Sources */,
 				183E22432B4FAD3C0069BEA5 /* LoginViewController.swift in Sources */,
+				183E22552B4FC47B0069BEA5 /* LoginViewModel.swift in Sources */,
 				4E677C15272B8650006E325E /* Constants.swift in Sources */,
 				4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */,
 				4E677C18272B88A6006E325E /* HomeViewController.swift in Sources */,
@@ -884,12 +916,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = JetDevsHomeWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jetdevs.JetDevsHomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -904,12 +938,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = JetDevsHomeWork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jetdevs.JetDevsHomeWork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -1,11 +1,17 @@
 PODS:
   - Kingfisher (7.10.1)
+  - RxCocoa (5.1.3):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.3):
+    - RxSwift (~> 5)
   - RxSwift (5.1.3)
   - SnapKit (5.6.0)
   - SwiftLint (0.54.0)
 
 DEPENDENCIES:
   - Kingfisher
+  - RxCocoa
   - RxSwift (~> 5.1.0)
   - SnapKit
   - SwiftLint
@@ -13,16 +19,20 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Kingfisher
+    - RxCocoa
+    - RxRelay
     - RxSwift
     - SnapKit
     - SwiftLint
 
 SPEC CHECKSUMS:
   Kingfisher: bc5abe80a8e0144537ef1dd5a0b2621b04f7f439
+  RxCocoa: e2ed092d5432e4296aa818021d27de4090ac0354
+  RxRelay: 5a18c2eb2d68326ebaf0112f80d837ae41b92b97
   RxSwift: 915abbdfb62214aa89ccd0b194d44fb478019b27
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwiftLint: c1de071d9d08c8aba837545f6254315bc900e211
 
-PODFILE CHECKSUM: e0420fc5685ededdcf74f35f276e6d0f2a00076f
+PODFILE CHECKSUM: 7b07b5a6254f59e1b6887f2f3659f62b2d2a4395
 
 COCOAPODS: 1.14.3

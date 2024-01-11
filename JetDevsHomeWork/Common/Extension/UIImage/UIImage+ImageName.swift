@@ -11,7 +11,7 @@ import UIKit
 extension UIImage {
     
     enum AssetIdentifier: String {
-        case closeButton = "close"
+        case closeButton = "icon_close"
         case appLogo = "logo"
     }
     
