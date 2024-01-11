@@ -42,4 +42,22 @@ class LoginViewModel {
         }
     }
     
+    func callLoginAPI() -> Observable<Bool> {
+            return Observable<Bool>.create { observer in
+                APIManager.shared.login(email: self.emailSubject.value ?? "", password: self.passwordSubject.value ?? "")
+                    .subscribe(
+                        onNext: { data in
+                            if data.result == 1 {
+                                observer.onCompleted()
+                            } else {
+                                observer.onError(ErrorModel.unknown(error: data.errorMessage ?? ""))
+                            }
+                        },
+                        onError: { error in
+                            observer.onError(error)
+                        }
+                    )
+            }
+        }
+    
 }

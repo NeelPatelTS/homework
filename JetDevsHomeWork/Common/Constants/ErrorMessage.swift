@@ -10,13 +10,16 @@ import Foundation
 enum ErrorMessage {
     case password
     case email
+    case urlInvalid
     
     func value() -> String {
         switch self {
         case .email:
             return "Please enter valid email address."
         case .password:
-            return "Password must be 6 characters."
+            return "Password must be 6 characters"
+        case .urlInvalid:
+            return "URL is not valid"
         }
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -208,7 +209,19 @@ class LoginViewController: UIViewController {
     
     // MARK: - Login Button Tap
     @objc private func loginButtonTap() {
-        
+        SVProgressHUD.show()
+        viewModel.callLoginAPI().subscribe { value in
+            SVProgressHUD.dismiss()
+            switch value {
+            case .completed:
+                self.dismiss(animated: true)
+            case .error(let error):
+                let errorM = error as? ErrorModel
+                self.showAlert(title: Constants.appName.value(), message: errorM?.description() ?? error.localizedDescription)
+            case .next:
+                break
+            }
+        }.disposed(by: disposeBag)
     }
     
     // MARK: - setupBindings
