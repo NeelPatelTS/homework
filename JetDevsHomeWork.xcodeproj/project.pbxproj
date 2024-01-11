@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183E22432B4FAD3C0069BEA5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22422B4FAD3C0069BEA5 /* LoginViewController.swift */; };
+		183E22462B4FADFF0069BEA5 /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22452B4FADFF0069BEA5 /* AppLabel.swift */; };
+		183E22502B4FBE1B0069BEA5 /* UIImage+ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E224F2B4FBE1B0069BEA5 /* UIImage+ImageName.swift */; };
+		183E22532B4FBEDA0069BEA5 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22522B4FBEDA0069BEA5 /* UIColor+Colors.swift */; };
 		4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BCD272B827F006E325E /* AppDelegate.swift */; };
 		4E677BD2272B827F006E325E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BD1272B827F006E325E /* ViewController.swift */; };
 		4E677BD5272B827F006E325E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E677BD3272B827F006E325E /* Main.storyboard */; };
@@ -63,6 +67,10 @@
 
 /* Begin PBXFileReference section */
 		07853C962945789A7D328A8F /* Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.release.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		183E22422B4FAD3C0069BEA5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		183E22452B4FADFF0069BEA5 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
+		183E224F2B4FBE1B0069BEA5 /* UIImage+ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ImageName.swift"; sourceTree = "<group>"; };
+		183E22522B4FBEDA0069BEA5 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		44E25A9D32B01E7986F6EE72 /* Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A78362750DC2D3CF1FB868C /* Pods-JetDevsHomeWorkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWorkTests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWorkTests/Pods-JetDevsHomeWorkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E677BCA272B827F006E325E /* JetDevsHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetDevsHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +147,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183E22412B4FAD170069BEA5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				183E22422B4FAD3C0069BEA5 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		183E22442B4FADE20069BEA5 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				183E22452B4FADFF0069BEA5 /* AppLabel.swift */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
+		183E22482B4FB39F0069BEA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		183E22492B4FB3A70069BEA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		183E224A2B4FB3B00069BEA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		183E224B2B4FB3B90069BEA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		183E224C2B4FB5910069BEA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		183E224D2B4FB5990069BEA5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		183E224E2B4FBDC60069BEA5 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				183E224F2B4FBE1B0069BEA5 /* UIImage+ImageName.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		183E22512B4FBECF0069BEA5 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				183E22522B4FBEDA0069BEA5 /* UIColor+Colors.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
 		4E677BC1272B827F006E325E = {
 			isa = PBXGroup;
 			children = (
@@ -209,9 +291,9 @@
 		4E677C00272B8360006E325E /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				183E224D2B4FB5990069BEA5 /* Views */,
+				183E224C2B4FB5910069BEA5 /* ViewModel */,
 				4E677C04272B83C3006E325E /* ViewController */,
-				4E677C03272B83BA006E325E /* ViewModel */,
-				4E677C02272B838E006E325E /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -219,25 +301,11 @@
 		4E677C01272B8367006E325E /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				4E677C07272B83DD006E325E /* Views */,
-				4E677C06272B83D5006E325E /* ViewModel */,
+				183E22492B4FB3A70069BEA5 /* Views */,
+				183E22482B4FB39F0069BEA5 /* ViewModel */,
 				4E677C05272B83CA006E325E /* ViewController */,
 			);
 			path = Account;
-			sourceTree = "<group>";
-		};
-		4E677C02272B838E006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		4E677C03272B83BA006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4E677C04272B83C3006E325E /* ViewController */ = {
@@ -258,49 +326,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		4E677C06272B83D5006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4E677C07272B83DD006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		4E677C08272B83E4006E325E /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				4E677C0B272B83FA006E325E /* Views */,
-				4E677C0A272B83F5006E325E /* ViewModel */,
-				4E677C09272B83EE006E325E /* ViewController */,
+				183E224B2B4FB3B90069BEA5 /* ViewModel */,
+				183E224A2B4FB3B00069BEA5 /* Views */,
+				183E22412B4FAD170069BEA5 /* ViewController */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		4E677C09272B83EE006E325E /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		4E677C0A272B83F5006E325E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		4E677C0B272B83FA006E325E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		4E677C12272B860A006E325E /* Common */ = {
@@ -348,6 +381,9 @@
 		4E677C4927323092006E325E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				183E22512B4FBECF0069BEA5 /* UIColor */,
+				183E224E2B4FBDC60069BEA5 /* UIImage */,
+				183E22442B4FADE20069BEA5 /* UILabel */,
 				4E677C4A273230A4006E325E /* UIFont */,
 			);
 			path = Extension;
@@ -661,9 +697,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E677BFF272B8319006E325E /* BaseTabBarController.swift in Sources */,
+				183E22462B4FADFF0069BEA5 /* AppLabel.swift in Sources */,
+				183E22502B4FBE1B0069BEA5 /* UIImage+ImageName.swift in Sources */,
 				4E677C10272B8455006E325E /* AccountViewController.swift in Sources */,
+				183E22532B4FBEDA0069BEA5 /* UIColor+Colors.swift in Sources */,
 				4E677BD2272B827F006E325E /* ViewController.swift in Sources */,
 				4E677C4C273230E5006E325E /* UIFont+JetDevs.swift in Sources */,
+				183E22432B4FAD3C0069BEA5 /* LoginViewController.swift in Sources */,
 				4E677C15272B8650006E325E /* Constants.swift in Sources */,
 				4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */,
 				4E677C18272B88A6006E325E /* HomeViewController.swift in Sources */,
