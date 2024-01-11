@@ -25,10 +25,12 @@ let tabBarTrueHeight: CGFloat = 49.0
 enum Constants {
     
     enum TextConstant {
+        
         case appName
         case password
         case email
         case login
+        case daysAgo(number: Int)
         
         func value() -> String {
             switch self {
@@ -40,6 +42,8 @@ enum Constants {
                 return "Email"
             case .login:
                 return "Login"
+            case .daysAgo(let number):
+                return "Created \(number) days ago"
             }
         }
     }

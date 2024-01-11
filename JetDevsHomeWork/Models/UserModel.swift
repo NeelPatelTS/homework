@@ -32,7 +32,7 @@ struct UserData: Codable {
             let date = createdAt?.toDate() ?? Date()
             let components = Set<Calendar.Component>([.day])
             let days = (Calendar.current.dateComponents(components, from: date, to: Date()).day ?? 0)
-            return "Created \(days) days ago"
+            return Constants.TextConstant.daysAgo(number: days).value()
         }
     }
     

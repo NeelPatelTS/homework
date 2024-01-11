@@ -61,39 +61,24 @@ class LoginViewController: UIViewController {
     
     // MARK: - setupemailView
     private func setupemailView() {
-        emailTextField.returnKeyType = .next
-        emailTextField.keyboardType = .emailAddress
-        emailTextField.font = UIFont.latoRegularFont(size: 16.0)
-        emailTextField.placeholder = Constants.TextConstant.email.value()
-        
+        decorateTextFieldView(placeHolder: .email,
+                              view: emailView,
+                              textField: emailTextField,
+                              label: emailLabel,
+                              errorLabel: emailErrorLabel,
+                              returnKeyType: .next,
+                              keyBoardType: .emailAddress)
         emailTextField.snp.makeConstraints { make in
             make.centerYWithinMargins.equalTo(self.emailView.snp.centerY)
             make.trailingMargin.equalTo(self.emailView.snp.trailingMargin).offset(-20)
             make.leadingMargin.equalTo(self.emailView.snp.leadingMargin).offset(20)
         }
-        
-        emailView.layer.borderWidth = 1
-        emailView.layer.borderColor = UIColor.lightGray.cgColor
-        emailView.layer.cornerRadius = 6
         emailView.snp.makeConstraints { make in
             make.height.equalTo(50.0)
             make.topMargin.equalTo(self.logoImage.snp.bottom).offset(50)
             make.trailingMargin.equalTo(self.view).inset(25)
             make.leadingMargin.equalTo(self.view).inset(25)
         }
-        
-        emailLabel.textColor = UIColor.black
-        emailLabel.bringSubviewToFront(self.emailView)
-        emailLabel.text = Constants.TextConstant.email.value()
-        if #available(iOS 13.0, *) {
-            emailLabel.textColor = UIColor.label
-            emailLabel.backgroundColor = UIColor.systemBackground
-        } else {
-            emailLabel.textColor = UIColor.black
-            emailLabel.backgroundColor = UIColor.white
-        }
-        
-        emailLabel.font = UIFont.latoMediumFont(size: 13)
         emailLabel.snp.makeConstraints { make in
             make.height.equalTo(20.0)
             make.centerY.equalTo(self.emailView.snp.topMargin).offset(-8)
@@ -104,38 +89,25 @@ class LoginViewController: UIViewController {
     
     // MARK: - SetupPasswordTextView
     private func setupPasswordTextView() {
-        passwordView.layer.borderWidth = 1
-        passwordView.layer.borderColor = UIColor.lightGray.cgColor
-        passwordView.layer.cornerRadius = 6
+        passwordTextField.isSecureTextEntry = true
+        decorateTextFieldView(placeHolder: .password,
+                              view: passwordView,
+                              textField: passwordTextField,
+                              label: passwordLabel,
+                              errorLabel: passwordErrorLabel,
+                              returnKeyType: .done,
+                              keyBoardType: .default)
         passwordView.snp.makeConstraints { make in
             make.height.equalTo(50.0)
             make.topMargin.equalTo(self.emailView.snp.bottom).offset(60)
             make.trailingMargin.equalTo(self.view).inset(25)
             make.leadingMargin.equalTo(self.view).inset(25)
         }
-        
-        if #available(iOS 13.0, *) {
-            passwordLabel.textColor = UIColor.label
-            passwordLabel.backgroundColor = UIColor.systemBackground
-        } else {
-            passwordLabel.textColor = UIColor.black
-            passwordLabel.backgroundColor = UIColor.white
-        }
-        
-        passwordLabel.bringSubviewToFront(self.emailView)
-        passwordLabel.text = Constants.TextConstant.password.value()
-        passwordLabel.font = UIFont.latoMediumFont(size: 13)
         passwordLabel.snp.makeConstraints { make in
             make.height.equalTo(20.0)
             make.centerY.equalTo(self.passwordView.snp.topMargin).offset(-8)
             make.leftMargin.equalTo(self.passwordView.snp.leftMargin).offset(15)
         }
-        
-        passwordTextField.returnKeyType = .done
-        passwordTextField.keyboardType = .default
-        passwordTextField.font = UIFont.latoRegularFont(size: 16.0)
-        passwordTextField.isSecureTextEntry = true
-        passwordTextField.placeholder = Constants.TextConstant.password.value()
         passwordTextField.snp.makeConstraints { make in
             make.centerYWithinMargins.equalTo(self.passwordView.snp.centerY)
             make.trailingMargin.equalTo(self.passwordView.snp.trailingMargin).offset(-20)
@@ -145,15 +117,12 @@ class LoginViewController: UIViewController {
     
     // MARK: - setupButtonsView
     private func setupButtonsView() {
-        closeButton.titleLabel?.font = .boldSystemFont(ofSize: 20.0)
-        closeButton.setTitleColor(.black, for: .normal)
         closeButton.setImage(UIImage(assetIdentifier: .closeButton), for: .normal)
         closeButton.addTarget(nil, action: #selector(closeButtonTap), for: .touchUpInside)
-        
         closeButton.snp.makeConstraints { make in
             make.leftMargin.equalTo(self.view).inset(16)
             make.topMargin.equalTo(self.view).inset(16)
-            make.height.equalTo(CGSize(width: 30, height: 30))
+            make.height.equalTo(CGSize(width: 20, height: 20))
         }
         loginButton.backgroundColor = UIColor(named: .appBlue)
         loginButton.addTarget(nil, action: #selector(loginButtonTap), for: .touchUpInside)
@@ -163,7 +132,7 @@ class LoginViewController: UIViewController {
         loginButton.setTitle(Constants.TextConstant.login.value(), for: .normal)
         loginButton.snp.makeConstraints { make in
             make.height.equalTo(50.0)
-            make.topMargin.equalTo(self.passwordView.snp.bottom).offset(100)
+            make.topMargin.equalTo(self.passwordView.snp.bottom).offset(160)
             make.trailingMargin.equalTo(self.view).inset(25)
             make.leadingMargin.equalTo(self.view).inset(25)
         }
@@ -180,26 +149,55 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - setupErrorLabel
-    func setupErrorLabel() {
-        emailErrorLabel.textColor = .red
-        emailErrorLabel.font = UIFont.latoMediumFont(size: 13.0)
-        emailErrorLabel.text = ErrorMessage.email.value()
-        emailErrorLabel.isHidden = true
+    private func setupErrorLabel() {
+        decorateErrorLabel(errorLabel: emailErrorLabel)
+        decorateErrorLabel(errorLabel: passwordErrorLabel)
         emailErrorLabel.snp.makeConstraints { make in
             make.height.equalTo(20.0)
             make.topMargin.equalTo(self.emailView.snp.bottomMargin).offset(15)
             make.leftMargin.equalTo(self.emailView.snp.leftMargin).offset(5)
         }
-    
-        passwordErrorLabel.textColor = .red
-        passwordErrorLabel.font = UIFont.latoMediumFont(size: 13.0)
-        passwordErrorLabel.text = ErrorMessage.password.value()
-        passwordErrorLabel.isHidden = true
         passwordErrorLabel.snp.makeConstraints { make in
             make.height.equalTo(20.0)
             make.topMargin.equalTo(self.passwordView.snp.bottomMargin).offset(15)
             make.leftMargin.equalTo(self.passwordView.snp.leftMargin).offset(5)
         }
+    }
+    
+    // MARK: - decorateErrorLabel
+    private func decorateErrorLabel(errorLabel: UILabel) {
+        errorLabel.textColor = .red
+        errorLabel.font = UIFont.latoMediumFont(size: 13.0)
+        errorLabel.text = ErrorMessage.email.value()
+        errorLabel.isHidden = true
+    }
+    
+    // MARK: - decorateTextFieldView
+    private func decorateTextFieldView(placeHolder: Constants.TextConstant,
+                                       view: UIView,
+                                       textField: UITextField,
+                                       label: UILabel,
+                                       errorLabel: UILabel,
+                                       returnKeyType: UIReturnKeyType,
+                                       keyBoardType: UIKeyboardType) {
+        textField.returnKeyType = returnKeyType
+        textField.keyboardType = keyBoardType
+        textField.font = UIFont.latoRegularFont(size: 16.0)
+        textField.placeholder = placeHolder.value()
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.layer.cornerRadius = 6
+        label.textColor = UIColor.black
+        label.bringSubviewToFront(view)
+        label.text = placeHolder.value()
+        if #available(iOS 13.0, *) {
+            label.textColor = UIColor.label
+            label.backgroundColor = UIColor.systemBackground
+        } else {
+            label.textColor = UIColor.black
+            label.backgroundColor = UIColor.white
+        }
+        label.font = UIFont.latoMediumFont(size: 13)
     }
     
     // MARK: - Close Button Tap
@@ -259,5 +257,4 @@ class LoginViewController: UIViewController {
             self.passwordTextField.resignFirstResponder()
         }.disposed(by: disposeBag)
     }
-
 }
