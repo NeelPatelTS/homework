@@ -23,6 +23,7 @@
 		183E226E2B4FE2AE0069BEA5 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E226D2B4FE2AE0069BEA5 /* BaseModel.swift */; };
 		183E22712B4FE5AB0069BEA5 /* UIViewCotroller+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22702B4FE5AB0069BEA5 /* UIViewCotroller+Extentions.swift */; };
 		183E22732B4FE6800069BEA5 /* APIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22722B4FE6800069BEA5 /* APIParameter.swift */; };
+		183E22762B4FEA5E0069BEA5 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E22752B4FEA5E0069BEA5 /* UserDefaultsManager.swift */; };
 		4E677BCE272B827F006E325E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BCD272B827F006E325E /* AppDelegate.swift */; };
 		4E677BD2272B827F006E325E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E677BD1272B827F006E325E /* ViewController.swift */; };
 		4E677BD5272B827F006E325E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E677BD3272B827F006E325E /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		183E226D2B4FE2AE0069BEA5 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		183E22702B4FE5AB0069BEA5 /* UIViewCotroller+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewCotroller+Extentions.swift"; sourceTree = "<group>"; };
 		183E22722B4FE6800069BEA5 /* APIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParameter.swift; sourceTree = "<group>"; };
+		183E22752B4FEA5E0069BEA5 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		44E25A9D32B01E7986F6EE72 /* Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests/Pods-JetDevsHomeWork-JetDevsHomeWorkUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4A78362750DC2D3CF1FB868C /* Pods-JetDevsHomeWorkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetDevsHomeWorkTests.debug.xcconfig"; path = "Target Support Files/Pods-JetDevsHomeWorkTests/Pods-JetDevsHomeWorkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E677BCA272B827F006E325E /* JetDevsHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetDevsHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -298,6 +300,14 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		183E22742B4FEA520069BEA5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				183E22752B4FEA5E0069BEA5 /* UserDefaultsManager.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		4E677BC1272B827F006E325E = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +333,7 @@
 		4E677BCC272B827F006E325E /* JetDevsHomeWork */ = {
 			isa = PBXGroup;
 			children = (
+				183E22742B4FEA520069BEA5 /* Utility */,
 				183E226A2B4FE26B0069BEA5 /* Models */,
 				4E677C12272B860A006E325E /* Common */,
 				4E677C08272B83E4006E325E /* Login */,
@@ -794,6 +805,7 @@
 				4E677BD2272B827F006E325E /* ViewController.swift in Sources */,
 				4E677C4C273230E5006E325E /* UIFont+JetDevs.swift in Sources */,
 				183E22432B4FAD3C0069BEA5 /* LoginViewController.swift in Sources */,
+				183E22762B4FEA5E0069BEA5 /* UserDefaultsManager.swift in Sources */,
 				183E22552B4FC47B0069BEA5 /* LoginViewModel.swift in Sources */,
 				4E677C15272B8650006E325E /* Constants.swift in Sources */,
 				183E22642B4FE1090069BEA5 /* APIEndpoint.swift in Sources */,

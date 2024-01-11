@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
         emailTextField.returnKeyType = .next
         emailTextField.keyboardType = .emailAddress
         emailTextField.font = UIFont.latoRegularFont(size: 16.0)
-        emailTextField.placeholder = Constants.email.value()
+        emailTextField.placeholder = Constants.TextConstant.email.value()
         
         emailTextField.snp.makeConstraints { make in
             make.centerYWithinMargins.equalTo(self.emailView.snp.centerY)
@@ -84,7 +84,7 @@ class LoginViewController: UIViewController {
         
         emailLabel.textColor = UIColor.black
         emailLabel.bringSubviewToFront(self.emailView)
-        emailLabel.text = Constants.email.value()
+        emailLabel.text = Constants.TextConstant.email.value()
         if #available(iOS 13.0, *) {
             emailLabel.textColor = UIColor.label
             emailLabel.backgroundColor = UIColor.systemBackground
@@ -123,7 +123,7 @@ class LoginViewController: UIViewController {
         }
         
         passwordLabel.bringSubviewToFront(self.emailView)
-        passwordLabel.text = Constants.password.value()
+        passwordLabel.text = Constants.TextConstant.password.value()
         passwordLabel.font = UIFont.latoMediumFont(size: 13)
         passwordLabel.snp.makeConstraints { make in
             make.height.equalTo(20.0)
@@ -135,7 +135,7 @@ class LoginViewController: UIViewController {
         passwordTextField.keyboardType = .default
         passwordTextField.font = UIFont.latoRegularFont(size: 16.0)
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.placeholder = Constants.password.value()
+        passwordTextField.placeholder = Constants.TextConstant.password.value()
         passwordTextField.snp.makeConstraints { make in
             make.centerYWithinMargins.equalTo(self.passwordView.snp.centerY)
             make.trailingMargin.equalTo(self.passwordView.snp.trailingMargin).offset(-20)
@@ -160,7 +160,7 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius = 6
         loginButton.titleLabel?.font = UIFont.latoSemiBoldFont(size: 18.0)
         loginButton.setTitleColor(.white, for: .normal)
-        loginButton.setTitle(Constants.login.value(), for: .normal)
+        loginButton.setTitle(Constants.TextConstant.login.value(), for: .normal)
         loginButton.snp.makeConstraints { make in
             make.height.equalTo(50.0)
             make.topMargin.equalTo(self.passwordView.snp.bottom).offset(100)
@@ -216,8 +216,8 @@ class LoginViewController: UIViewController {
             case .completed:
                 self.dismiss(animated: true)
             case .error(let error):
-                let errorM = error as? ErrorModel
-                self.showAlert(title: Constants.appName.value(), message: errorM?.description() ?? error.localizedDescription)
+                let errorModel = error as? ErrorModel
+                self.showAlert(title: Constants.TextConstant.appName.value(), message: errorModel?.description() ?? error.localizedDescription)
             case .next:
                 break
             }

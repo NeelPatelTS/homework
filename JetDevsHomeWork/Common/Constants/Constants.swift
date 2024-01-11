@@ -24,21 +24,32 @@ let tabBarTrueHeight: CGFloat = 49.0
 
 enum Constants {
     
-    case appName
-    case password
-    case email
-    case login
-    
-    func value() -> String {
-        switch self {
-        case .appName:
-            return (Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? "")
-        case .password:
-            return "Password"
-        case .email:
-            return "Email"
-        case .login:
-            return "Login"
+    enum TextConstant {
+        case appName
+        case password
+        case email
+        case login
+        
+        func value() -> String {
+            switch self {
+            case .appName:
+                return (Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? "")
+            case .password:
+                return "Password"
+            case .email:
+                return "Email"
+            case .login:
+                return "Login"
+            }
         }
     }
+    
+    enum UserDefaultsKey: String {
+        case isLogin
+        case userDetails
+        case token
+        
+    }
 }
+
+

@@ -11,6 +11,7 @@ enum ErrorMessage {
     case password
     case email
     case urlInvalid
+    case somethingWrong
     
     func value() -> String {
         switch self {
@@ -20,6 +21,8 @@ enum ErrorMessage {
             return "Password must be 6 characters"
         case .urlInvalid:
             return "URL is not valid"
+        case .somethingWrong:
+            return "something went wrong"
         }
     }
 }

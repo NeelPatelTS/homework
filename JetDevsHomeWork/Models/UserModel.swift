@@ -8,6 +8,7 @@
 import Foundation
 
 struct UserModel: Codable {
+    
     let userData: UserData?
     
     enum CodingKeys: String, CodingKey {
@@ -20,8 +21,8 @@ struct UserModel: Codable {
     }
 }
 
-
 struct UserData: Codable {
+    
     let userID: Int?
     let userName: String?
     let userProfileURL: String?
@@ -30,7 +31,7 @@ struct UserData: Codable {
         get {
             let date = createdAt?.toDate() ?? Date()
             let components = Set<Calendar.Component>([.day])
-            let days = Calendar.current.dateComponents(components, from: date, to: Date()).day ?? 0
+            let days = (Calendar.current.dateComponents(components, from: date, to: Date()).day ?? 0)
             return "Created \(days) days ago"
         }
     }

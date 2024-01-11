@@ -48,9 +48,11 @@ class LoginViewModel {
                     .subscribe(
                         onNext: { data in
                             if data.result == 1 {
+                                UserDefaultsManager.shared.userDetails = data.responseData?.userData
+                                UserDefaultsManager.shared.isUserLogin = true
                                 observer.onCompleted()
                             } else {
-                                observer.onError(ErrorModel.unknown(error: data.errorMessage ?? ""))
+                                observer.onError(ErrorModel.unknown(error: data.errorMessage ?? ErrorMessage.somethingWrong.value()))
                             }
                         },
                         onError: { error in

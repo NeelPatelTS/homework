@@ -34,6 +34,11 @@ class APIManager {
             let request = AF.request(urlrequest)
                 .validate()
                 .responseDecodable(of: T.self) { response in
+                    
+                    if let headers = response.response?.allHeaderFields as? [String: String] {
+                        self.storeApiHeaders(headers)
+                    }
+                    
                     switch response.result {
                     case .success(let value):
                         observer.onNext(value)
@@ -52,5 +57,11 @@ class APIManager {
         let parameters: Parameters = [APIParameter.email.rawValue: email,
                                       APIParameter.password.rawValue: password]
         return request(endpoint: .login, method: .post, parameters: parameters)
+    }
+    
+    private func storeApiHeaders(_ headers: [String: String]) {
+        if let xAcc = headers["X-Acc"] {
+            UserDefaultsManager.shared.token = xAcc
+        }
     }
 }
