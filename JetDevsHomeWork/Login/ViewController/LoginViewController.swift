@@ -150,8 +150,8 @@ class LoginViewController: UIViewController {
     
     // MARK: - setupErrorLabel
     private func setupErrorLabel() {
-        decorateErrorLabel(errorLabel: emailErrorLabel)
-        decorateErrorLabel(errorLabel: passwordErrorLabel)
+        decorateErrorLabel(errorLabel: emailErrorLabel, text: .email)
+        decorateErrorLabel(errorLabel: passwordErrorLabel, text: .password)
         emailErrorLabel.snp.makeConstraints { make in
             make.height.equalTo(20.0)
             make.topMargin.equalTo(self.emailView.snp.bottomMargin).offset(15)
@@ -165,10 +165,10 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: - decorateErrorLabel
-    private func decorateErrorLabel(errorLabel: UILabel) {
+    private func decorateErrorLabel(errorLabel: UILabel, text: ErrorMessage) {
         errorLabel.textColor = .red
         errorLabel.font = UIFont.latoMediumFont(size: 13.0)
-        errorLabel.text = ErrorMessage.email.value()
+        errorLabel.text = text.value()
         errorLabel.isHidden = true
     }
     
